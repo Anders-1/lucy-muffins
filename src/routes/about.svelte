@@ -6,8 +6,6 @@
 
 <script>
 
-  // TODO: Use template for pages and cases.
-
   import {theme} from '../stores.js';
   import { onMount } from 'svelte';
 
@@ -15,7 +13,7 @@
 	let name = "AMS Detectives";
 	let icon_light = '/images/icon-light.svg';
 	let icon_dark = '/images/icon-dark.svg';
-  let home = './';
+  let home = '..';
   let about = '/about';
   let cases = '/cases';
 	let carousel_images = ['/images/spyads.jpeg',
@@ -87,8 +85,8 @@
       <img class:is-hidden="{!isdark}" src={icon_dark} alt="Dark spy icon">
 		</a>
     <div class="tabs">
-      <a class="active" href="{home}">Home</a>
-      <a href="{about}">About</a>
+      <a href="{home}">Home</a>
+      <a class="active" href="{about}">About</a>
       <a href="{cases}">Cases</a>
     </div>
   </div>
@@ -96,57 +94,20 @@
     <a class="button outline" on:click={darkMode}>{button_text}</a>
   </div>
 </nav>
-<h1 class="text-center">{name}</h1>
-<h3 class="text-center">Have a case that needs to be solved?</h3>
-<h3 class="text-center">We here at {name} have great detective skills and can solve any case you need!</h3>
-<div class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="3000">
-			<img src={carousel_images[0]} alt="{name} ads">
-    </div>
-    <div class="carousel-item" data-bs-interval="3000">
-			<img src={carousel_images[1]} alt="{name} case files">
-    </div>
-    <div class="carousel-item" data-bs-interval="3000">
-			<img src={carousel_images[2]} alt="{name} ads notes">
-    </div>
-		<div class="carousel-item black-border" data-bs-interval="3000">
-			<img src={carousel_images[3]} alt="spy clipart">
-		</div>
-  </div>
-</div>
 
+<h1 class="text-center">This is {name}!</h1>
+<h2 class="text-center">We help solve cases!</h2>
 
 <style>
-	/* :root {
-		--bg-color: pink !important;
-	}
-	:global(body.dark) {
-		--bg-color: lightblue;
-	} */
-	:global(body.dark) {
-		--bg-color: #000;
-		--bg-secondary-color: #131316;
-		--font-color: #f5f5f5;
-		--color-grey: #ccc;
-		--color-darkGrey: #777;
-	}
-
-	.carousel-item img {
-		border-radius: 10px;
-		display: block;
-	  margin-left: auto;
-	  margin-right: auto;
-	  width: 50%;
-		width: 500px;
-	}
-
-	.black-border img {
-		border: 3px solid black;
-	}
-
-  :global(.bodytransition) {
-    transition: --bg-color, 0.3s;
+  :global(body.dark) {
+    --bg-color: #000;
+    --bg-secondary-color: #131316;
+    --font-color: #f5f5f5;
+    --color-grey: #ccc;
+    --color-darkGrey: #777;
   }
 
+  :global(body) {
+    transition: --bg-color, 0.3s;
+  }
 </style>
