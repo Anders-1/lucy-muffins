@@ -98,6 +98,8 @@
 </nav>
 <h1 class="text-center">{name}</h1>
 <h3 class="text-center">Want to taste some delicious pasteries?</h3>
+<img class:is-hidden="{isdark}" src={icon_light} alt="Light spy icon">
+<img class:is-hidden="{!isdark}" src={icon_dark} alt="Dark spy icon">
 <h3 class="text-center">We here at {name} have great baking skills and can whip up whatever you want, for a great price!</h3>
 <div class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
