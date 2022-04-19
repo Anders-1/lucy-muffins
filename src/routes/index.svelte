@@ -12,16 +12,16 @@
   import { onMount } from 'svelte';
 
 	// Brand variables
-	let name = "AMS Detectives";
+	let name = "Lucy'n Muffins";
 	let icon_light = '/images/icon-light.svg';
 	let icon_dark = '/images/icon-dark.svg';
   let home = './';
   let about = '/about';
-  let cases = '/cases';
-	let carousel_images = ['/images/spyads.jpeg',
-	 											 '/images/spycase.jpeg',
-												 '/images/spynotes.jpeg',
-											   'https://st.depositphotos.com/2196544/2312/i/600/depositphotos_23120686-stock-photo-sneaking-spy.jpg']
+  let recipies = '/recipies';
+	let carousel_images = ['/images/lucy-logo.png',
+	 											 '/images/lucy-closeup.jpeg',
+												 '/images/lucy-notebooks.png',
+											   'lucy-instructions.jpeg']
 
 	let isdark = false;
   let button_text = "dark";
@@ -89,7 +89,7 @@
     <div class="tabs">
       <a class="active" href="{home}">Home</a>
       <a href="{about}">About</a>
-      <a href="{cases}">Cases</a>
+      <a href="{recipies}">Recipies</a>
     </div>
   </div>
   <div class="nav-right">
@@ -97,8 +97,8 @@
   </div>
 </nav>
 <h1 class="text-center">{name}</h1>
-<h3 class="text-center">Have a case that needs to be solved?</h3>
-<h3 class="text-center">We here at {name} have great detective skills and can solve any case you need!</h3>
+<h3 class="text-center">Want to taste some delicious pasteries?</h3>
+<h3 class="text-center">We here at {name} have great baking skills and can whip up whatever you want, for a great price!</h3>
 <div class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="3000">

@@ -10,16 +10,16 @@
   import { onMount } from 'svelte';
 
 	// Brand variables
-	let name = "AMS Detectives";
+	let name = "Lucy'n Muffins";
 	let icon_light = '/images/icon-light.svg';
 	let icon_dark = '/images/icon-dark.svg';
   let home = '..';
   let about = '/about';
-  let cases = '/cases';
-	let carousel_images = ['/images/spyads.jpeg',
-	 											 '/images/spycase.jpeg',
-												 '/images/spynotes.jpeg',
-											   'https://st.depositphotos.com/2196544/2312/i/600/depositphotos_23120686-stock-photo-sneaking-spy.jpg']
+	let recipies = '/recipies';
+	let carousel_images = ['/images/lucy-logo.png',
+												 '/images/lucy-closeup.jpeg',
+												 '/images/lucy-notebooks.png',
+												 'lucy-instructions.jpeg']
 
 	let isdark = false;
   let button_text = "dark";
@@ -87,7 +87,7 @@
     <div class="tabs">
       <a href="{home}">Home</a>
       <a class="active" href="{about}">About</a>
-      <a href="{cases}">Cases</a>
+			<a href="{recipies}">Recipies</a>
     </div>
   </div>
   <div class="nav-right">
@@ -96,7 +96,8 @@
 </nav>
 
 <h1 class="text-center">This is {name}!</h1>
-<h2 class="text-center">We help solve cases!</h2>
+<h2 class="text-center">We were created by Lucy, a passionate baker who</h2>
+<h2 class="text-center">wants to give everyone the joy of tasing great pasteries.</h2>
 
 <style>
   :global(body.dark) {

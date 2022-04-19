@@ -6,25 +6,24 @@
 
 <script>
 
-  import {theme} from '../stores.js';
+  import {theme} from '../../stores.js';
   import { onMount } from 'svelte';
 
 	// Brand variables
-	let name = "AMS Detectives";
+	let name = "Lucy'n Muffins";
 	let icon_light = '/images/icon-light.svg';
 	let icon_dark = '/images/icon-dark.svg';
-  let home = '..';
+  let home = '../..';
   let about = '/about';
-  let cases = '/cases';
-	let carousel_images = ['/images/spyads.jpeg',
-	 											 '/images/spycase.jpeg',
-												 '/images/spynotes.jpeg',
-											   'https://st.depositphotos.com/2196544/2312/i/600/depositphotos_23120686-stock-photo-sneaking-spy.jpg']
+	let recipies = '/recipies';
+	let carousel_images = ['/images/lucy-logo.png',
+												 '/images/lucy-closeup.jpeg',
+												 '/images/lucy-notebooks.png',
+												 'lucy-instructions.jpeg']
 
 	let isdark = false;
   let button_text = "dark";
-  let caselist = ['testcase',
-                  'testcasetwo']
+  let case_name = "testcasetwo";
 
   onMount(async () => {
 
@@ -89,7 +88,7 @@
     <div class="tabs">
       <a href="{home}">Home</a>
       <a href="{about}">About</a>
-      <a class="active" href="{cases}">Cases</a>
+			<a href="{recipies}">Recipies</a>
     </div>
   </div>
   <div class="nav-right">
@@ -97,14 +96,7 @@
   </div>
 </nav>
 
-<h1 class="text-center">These are our past and current cases.</h1>
-<ul>
-	{#each caselist as name }
-		<li>
-			<a href="./cases/{name}">{name}</a>
-		</li>
-	{/each}
-</ul>
+<h1 class="text-center">{case_name}</h1>
 
 
 <style>
@@ -118,9 +110,5 @@
 
   :global(body) {
     transition: --bg-color, 0.3s;
-  }
-
-  li {
-    margin-left: 20px;
   }
 </style>
