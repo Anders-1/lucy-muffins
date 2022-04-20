@@ -16,6 +16,7 @@
   let home = '..';
   let about = '/about';
 	let recipies = '/recipies';
+	let order = '/order';
 	let carousel_images = ['/images/lucy-logo.png',
 	 											 '/images/lucy-closeup.jpeg',
 												 '/images/lucy-notebooks.png',
@@ -88,8 +89,9 @@
 		</a>
     <div class="tabs">
       <a href="{home}">Home</a>
+			<a href="{order}">Order</a>
       <a href="{about}">About</a>
-			<a href="{recipies}">Recipies</a>
+			<a class="active" href="{recipies}">Recipies</a>
     </div>
   </div>
   <div class="nav-right">

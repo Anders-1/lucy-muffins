@@ -6,8 +6,6 @@
 
 <script>
 
-  // TODO: Use template for pages and cases.
-
   import {theme} from '../stores.js';
   import { onMount } from 'svelte';
 
@@ -15,14 +13,14 @@
 	let name = "Lucy'n Muffins";
 	let icon_light = '/images/icon-light.svg';
 	let icon_dark = '/images/icon-dark.svg';
-  let home = './';
+  let home = '..';
   let about = '/about';
-  let recipies = '/recipies';
-	let order = '/order';
+	let recipies = '/recipies';
+  let order = '/order';
 	let carousel_images = ['/images/lucy-logo.png',
-	 											 '/images/lucy-closeup.jpeg',
+												 '/images/lucy-closeup.jpeg',
 												 '/images/lucy-notebooks.png',
-											   '/images/lucy-instructions.jpeg']
+												 'lucy-instructions.jpeg']
 
 	let isdark = false;
   let button_text = "dark";
@@ -88,67 +86,35 @@
       <img class:is-hidden="{!isdark}" src={icon_dark} alt="Dark chef hat icon">
 		</a>
     <div class="tabs">
-      <a class="active" href="{home}">Home</a>
-			<a href="{order}">Order</a>
+      <a href="{home}">Home</a>
+      <a class="active" href="{order}">Order</a>
       <a href="{about}">About</a>
-      <a href="{recipies}">Recipies</a>
+			<a href="{recipies}">Recipies</a>
     </div>
   </div>
   <div class="nav-right">
     <a class="button outline" on:click={darkMode}>{button_text}</a>
   </div>
 </nav>
-<h1 class="text-center">{name}</h1>
-<h3 class="text-center">Want to taste some delicious pasteries?</h3>
-<h3 class="text-center">We here at {name} have great baking skills and can whip up whatever you want, for a great price!</h3>
-<div class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="3000">
-			<img src={carousel_images[0]} alt="{name} logo">
-    </div>
-    <div class="carousel-item" data-bs-interval="3000">
-			<img src={carousel_images[1]} alt="Lucy closeup photo">
-    </div>
-    <div class="carousel-item" data-bs-interval="3000">
-			<img src={carousel_images[2]} alt="Recipie notebooks">
-    </div>
-		<div class="carousel-item" data-bs-interval="3000">
-			<img src={carousel_images[3]} alt="Baking instructions">
-		</div>
-  </div>
-</div>
+
+<h1 class="text-center">Here you can order muffins from us.</h1>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScJ6S-GhOjxrdrdt0w5cX0Xgv1md7zr1OKfx9AWcEyCwUv7-g/viewform?embedded=true" width="640" height="1231" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 
 <style>
-	/* :root {
-		--bg-color: pink !important;
-	}
-	:global(body.dark) {
-		--bg-color: lightblue;
-	} */
-	:global(body.dark) {
-		--bg-color: #000;
-		--bg-secondary-color: #131316;
-		--font-color: #f5f5f5;
-		--color-grey: #ccc;
-		--color-darkGrey: #777;
-	}
-
-	.carousel-item img {
-		border-radius: 10px;
-		display: block;
-	  margin-left: auto;
-	  margin-right: auto;
-	  width: 50%;
-		width: 500px;
-	}
-
-	.black-border img {
-		border: 3px solid black;
-	}
-
-  :global(.bodytransition) {
-    transition: --bg-color, 0.3s;
+  :global(body.dark) {
+    --bg-color: #000;
+    --bg-secondary-color: #131316;
+    --font-color: #f5f5f5;
+    --color-grey: #ccc;
+    --color-darkGrey: #777;
   }
 
+  :global(body) {
+    transition: --bg-color, 0.3s;
+  }
+  iframe {
+    margin:auto;
+    display:block;
+  }
 </style>
