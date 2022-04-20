@@ -81,8 +81,8 @@
   <div class="nav-left">
     <a class="brand" href="{home}">{name}</a>
 		<a class="brand" href="{home}">
-			<img class:is-hidden="{isdark}" src={icon_light} alt="Light spy icon">
-      <img class:is-hidden="{!isdark}" src={icon_dark} alt="Dark spy icon">
+			<img class:is-hidden="{isdark}" src={icon_light} alt="Light chef hat icon">
+      <img class:is-hidden="{!isdark}" src={icon_dark} alt="Dark chef hat icon">
 		</a>
     <div class="tabs">
       <a href="{home}">Home</a>

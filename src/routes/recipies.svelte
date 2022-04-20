@@ -83,8 +83,8 @@
   <div class="nav-left">
     <a class="brand" href="{home}">{name}</a>
 		<a class="brand" href="{home}">
-			<img class:is-hidden="{isdark}" src={icon_light} alt="Light spy icon">
-      <img class:is-hidden="{!isdark}" src={icon_dark} alt="Dark spy icon">
+			<img class:is-hidden="{isdark}" src={icon_light} alt="Light chef hat icon">
+      <img class:is-hidden="{!isdark}" src={icon_dark} alt="Dark chef hat icon">
 		</a>
     <div class="tabs">
       <a href="{home}">Home</a>
@@ -97,11 +97,11 @@
   </div>
 </nav>
 
-<h1 class="text-center">These are our past and current cases.</h1>
+<h1 class="text-center">These are all our delectable recipies.</h1>
 <ul>
 	{#each caselist as name }
 		<li>
-			<a href="./cases/{name}">{name}</a>
+			<a href="./recipies/{name}">{name}</a>
 		</li>
 	{/each}
 </ul>

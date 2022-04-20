@@ -83,8 +83,8 @@
   <div class="nav-left">
     <a class="brand" href="{home}">{name}</a>
 		<a class="brand" href="{home}">
-			<img class:is-hidden="{isdark}" src={icon_light} alt="Light spy icon">
-      <img class:is-hidden="{!isdark}" src={icon_dark} alt="Dark spy icon">
+			<img class:is-hidden="{isdark}" src={icon_light} alt="Light chef hat icon">
+      <img class:is-hidden="{!isdark}" src={icon_dark} alt="Dark chef hat icon">
 		</a>
     <div class="tabs">
       <a class="active" href="{home}">Home</a>
@@ -102,16 +102,16 @@
 <div class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="3000">
-			<img src={carousel_images[0]} alt="{name} ads">
+			<img src={carousel_images[0]} alt="{name} logo">
     </div>
     <div class="carousel-item" data-bs-interval="3000">
-			<img src={carousel_images[1]} alt="{name} case files">
+			<img src={carousel_images[1]} alt="Lucy closeup photo">
     </div>
     <div class="carousel-item" data-bs-interval="3000">
-			<img src={carousel_images[2]} alt="{name} ads notes">
+			<img src={carousel_images[2]} alt="Recipie notebooks">
     </div>
-		<div class="carousel-item black-border" data-bs-interval="3000">
-			<img src={carousel_images[3]} alt="spy clipart">
+		<div class="carousel-item" data-bs-interval="3000">
+			<img src={carousel_images[3]} alt="Baking instructions">
 		</div>
   </div>
 </div>
