@@ -21,7 +21,7 @@
 	let carousel_images = ['/images/lucy-logo.png',
 	 											 '/images/lucy-closeup.jpeg',
 												 '/images/lucy-notebooks.png',
-											   'lucy-instructions.jpeg']
+											   '/images/lucy-instructions.jpeg']
 
 	let isdark = false;
   let button_text = "dark";
