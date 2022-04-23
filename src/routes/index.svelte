@@ -10,6 +10,17 @@
 
   import {theme} from '../stores.js';
   import { onMount } from 'svelte';
+	import FingerprintJS from '@fingerprintjs/fingerprintjs-pro'
+
+	// Initialize an agent at application startup.
+	const fpPromise = FingerprintJS.load({
+	  apiKey: 'f5uP8l1U2kWnVDhMlPVc'
+	})
+
+	// Get the visitor identifier when you need it.
+	fpPromise
+	  .then(fp => fp.get())
+	  .then(result => console.log(result.visitorId))
 
 	// Brand variables
 	let name = "Lucy'n Muffins";
@@ -26,19 +37,6 @@
 
 	let isdark = false;
   let button_text = "dark";
-
-	// Initialize the agent at application startup.
-	const fpPromise = import('https://fpcdn.io/v3/f5uP8l1U2kWnVDhMlPVc')
-		.then(FingerprintJS => FingerprintJS.load())
-
-	// Get the visitor identifier when you need it.
-	fpPromise
-		.then(fp => fp.get())
-		.then(result => {
-			// This is the visitor identifier:
-			const visitorId = result.visitorId
-			console.log(visitorId)
-		})
 
   onMount(async () => {
 
