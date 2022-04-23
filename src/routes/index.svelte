@@ -27,6 +27,19 @@
 	let isdark = false;
   let button_text = "dark";
 
+	// Initialize the agent at application startup.
+	const fpPromise = import('https://fpcdn.io/v3/f5uP8l1U2kWnVDhMlPVc')
+		.then(FingerprintJS => FingerprintJS.load())
+
+	// Get the visitor identifier when you need it.
+	fpPromise
+		.then(fp => fp.get())
+		.then(result => {
+			// This is the visitor identifier:
+			const visitorId = result.visitorId
+			console.log(visitorId)
+		})
+
   onMount(async () => {
 
     if ($theme == "null" || $theme == "undefined" || $theme == "") {
