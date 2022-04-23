@@ -11,6 +11,7 @@
   import {theme} from '../stores.js';
   import { onMount } from 'svelte';
 	import FingerprintJS from '@fingerprintjs/fingerprintjs-pro'
+	let id;
 
 	// Initialize an agent at application startup.
 	const fpPromise = FingerprintJS.load({
@@ -20,7 +21,9 @@
 	// Get the visitor identifier when you need it.
 	fpPromise
 	  .then(fp => fp.get())
-	  .then(result => console.log(result.visitorId))
+	  .then(result => id = result.visitorId)
+
+	console.log(id)
 
 	// Brand variables
 	let name = "Lucy'n Muffins";
