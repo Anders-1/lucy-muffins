@@ -20,10 +20,11 @@
 	// Get the visitor identifier when you need it.
 	fpPromise
 	  .then(fp => fp.get())
+	  .then(result => result.visitorId)
 
-	console.log(result.visitorId);
+	console.log(result.visitorId)
 	if (result.visitorId = "idk") {
-		console.log("Anders!");
+		console.log("Anders!")
 	}
 
 	// Brand variables
