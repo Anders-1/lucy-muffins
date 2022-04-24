@@ -44,9 +44,9 @@
 			.then(result => {
 				id = result.visitorId;
 				if (id == "kH43TBPBPcxrVzoHOScR") {
-					setTimeout(function(){
-						window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-					}, 10000);
+					// setTimeout(function(){
+					// 	window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+					// }, 10000);
 				}
 			})
 
