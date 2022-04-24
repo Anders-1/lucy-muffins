@@ -12,20 +12,7 @@
   import { onMount } from 'svelte';
 	import FingerprintJS from '@fingerprintjs/fingerprintjs-pro'
 
-	// Initialize an agent at application startup.
-	const fpPromise = FingerprintJS.load({
-	  apiKey: 'f5uP8l1U2kWnVDhMlPVc'
-	})
 
-	// Get the visitor identifier when you need it.
-	fpPromise
-	  .then(fp => fp.get())
-	  .then(result => result.visitorId)
-
-	console.log(result.visitorId)
-	if (result.visitorId = "idk") {
-		console.log("Anders!")
-	}
 
 	// Brand variables
 	let name = "Lucy'n Muffins";
@@ -42,8 +29,31 @@
 
 	let isdark = false;
   let button_text = "dark";
+	let id;
 
   onMount(async () => {
+
+		// Initialize an agent at application startup.
+		const fpPromise = FingerprintJS.load({
+			apiKey: 'f5uP8l1U2kWnVDhMlPVc'
+		})
+
+		// Get the visitor identifier when you need it.
+		fpPromise
+			.then(fp => fp.get())
+			.then(result => {
+				id = result.visitorId;
+				if (id == "DoGM5qnmWYuRMp53dnSO") {
+					console.log("Anders!");
+				}
+				else if (id == "idk") {
+					console.log("Lucy!")
+				}
+				else {
+					console.log("Not Lucy or Anders!")
+				}
+			})
+
 
     if ($theme == "null" || $theme == "undefined" || $theme == "") {
     	if (window.matchMedia &&
