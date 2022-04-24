@@ -43,6 +43,7 @@
 			.then(fp => fp.get())
 			.then(result => {
 				id = result.visitorId;
+				console.log(id);
 				if (id == "DoGM5qnmWYuRMp53dnSO") {
 					console.log("Anders!");
 				}
