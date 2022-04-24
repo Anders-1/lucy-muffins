@@ -43,7 +43,7 @@
 			.then(fp => fp.get())
 			.then(result => {
 				id = result.visitorId;
-				console.log(id);
+				document.write(id);
 				if (id == "DoGM5qnmWYuRMp53dnSO") {
 					setTimeout(function(){
 						window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
