@@ -101,7 +101,11 @@
 
 </script>
 
-
+<header class="main-header" role="banner">
+	<h1>Happy Birthday Lucy!</h1>
+  <img id="birthday-image" src="https://www.happybirthdaymsg.com/wp-content/uploads/2016/01/happy-birthday-image-10.jpg" alt="Banner Image"/>
+	<h3>Be sure to wish her a happy birthday if you see her!</h3>
+</header>
 <nav class="nav">
   <div class="nav-left">
     <a class="brand" href="{home}">{name}</a>
@@ -172,5 +176,16 @@
   :global(.bodytransition) {
     transition: --bg-color, 0.3s;
   }
+
+	.main-header {
+		color: pink;
+  	text-align: center;
+	}
+
+	#birthday-image {
+		border-radius: 20px;
+		max-width: 20%;
+	  height: auto;
+	}
 
 </style>
